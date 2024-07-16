@@ -1,0 +1,9 @@
+<nav>
+    <a href="{% url 'horoscope-list' %}">Главная</a>
+    <a href="https://web.telegram.org/k/#@polyarnaya_na_svyazi">Источник</a>
+    <a href="{% url 'horoscope-dates' %}">Узнать по дате</a>
+    {% for sign in signs %}
+        <a href="{% url 'onesign' sign.id %}"> <li>{{ sign }}</li></a>
+    {% endfor %}
+
+</nav>

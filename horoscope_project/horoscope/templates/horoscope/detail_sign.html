@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <title>Horoscope</title>
+{% endblock %}
+
+{% block static_additional %}
+    <link rel="stylesheet" href="{% static 'horoscope/css/sign_info.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1> {{ object }} </h1>
+    <h2>{{ object.description}}</h2>
+    <img src="{{ object.image.url }}" alt="">
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Horoscope Dates</title>{% endblock %}
+
+{% block static_additional %}
+    <link rel="stylesheet" href="{% static 'horoscope/css/horoscope_dates.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2>Введите свою дату</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-style">
+                {{ field.label_tag }}
+                {{ field.errors }}
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock %}

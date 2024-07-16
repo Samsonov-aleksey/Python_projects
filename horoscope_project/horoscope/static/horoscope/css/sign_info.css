@@ -1,0 +1,21 @@
+h2 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 30px;
+}
+
+h1 {
+    color: #e8dede;
+    text-align: center;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+img {
+    max-width: 80%; /* Устанавливаем максимальную ширину изображения */
+    height: auto; /* Автоматически вычисляем высоту, чтобы сохранить пропорции */
+    display: block; /* Делаем изображение блочным элементом */
+    margin: 0 auto; /* Автоматический отступ слева и справа делает изображение по центру */
+    margin-bottom: 20px; /* Добавляем небольшой отступ снизу для разделения изображений */
+}
