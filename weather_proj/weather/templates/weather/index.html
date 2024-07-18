@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Weather info {% endblock %}
+
+{% block content %}
+    {% if not temperature %}
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="text" name="city" id="city" placeholder="Введите название города" required value="{{ form.initial.city }}">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    {% elif temperature %}
+    <h1>Weather information</h1>
+    <h2>Город: {{ city }} </h2>
+    <h2>Небо: {{ description }} </h2>
+    <h2>Температура: {{ temperature }}°С </h2>
+    <h2>Скорость ветра: {{ wind_speed }}м/c </h2>
+    <h2>Влажность: {{ humidity }}</h2>
+    <a href="{% url 'weather_info' %}" class="btn-back">Назад</a>
+    {% endif %}
+{% endblock %}
